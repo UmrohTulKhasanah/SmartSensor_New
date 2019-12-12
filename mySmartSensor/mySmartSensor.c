@@ -4,6 +4,7 @@
  *  Created on: Dec 11, 2019
  *      Author: Umroh
  */
+/*contribute by goldinoragung*/
 
 #include "mySmartSensor.h"
 
@@ -129,7 +130,8 @@ void SmartSensor(void){
 		Kirim = digitalRaw(TF2, TF1, TF0);
 	}break;
 
-	/* Decision	*/
+/* Decision	*/
+	/*contribute by goldinoragung */
 	case 0x01:{
 		dRaw = digitalRaw(TF2, TF1, TF0);
 		Kirim = dicision(dRaw);
@@ -137,6 +139,7 @@ void SmartSensor(void){
 	}
 }
 
+/*contribute by goldinoragung */
 void calibrate_S0(uint8_t *ThrsHigh, uint8_t *ThrsLow, uint16_t *ThrsFull){
 	/* read the adc	*/
 	myADC_read(0, 0, 0, &SF0);
@@ -222,6 +225,7 @@ uint8_t digitalRaw(uint16_t Thrs2, uint16_t Thrs1, uint16_t Thrs0){
 
 	return resultDigital;
 }
+/* contribute by goldinoragung */
 uint8_t dicision(uint8_t in_digitalRaw){
 	uint8_t result;
 	if(in_digitalRaw == 0x01)
